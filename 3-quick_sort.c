@@ -26,7 +26,7 @@ void QuickSort(int *array, int start, int end, size_t size)
 	if (start < end)
 
 	{
-		Pivot = partition(array, start, end, size);
+		pivot = partition(array, start, end, size);
 		QuickSort(array, start, pivot - 1, size);
 		QuickSort(array, pivot + 1, end, size);
 	}
@@ -40,12 +40,12 @@ void QuickSort(int *array, int start, int end, size_t size)
  * @size: size of array
  * @Return: index of pivot
  */
-int partition(int *array, int start, int end, szie_t szie)
+int partition(int *array, int start, int end, size_t size)
 {
 	int Pindex, pivot, i, temp;
 
 	pivot = end;
-	pindex = start;
+	Pindex = start;
 
 	for (i = start; i < end; i++)
 	{
